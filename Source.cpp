@@ -1,11 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class SortAlgorithm {
+class SortAlgorithm { //initialize
 private:
-	static SortAlgorithm* _algorithm;
-	void(*currentAlgorithm)(float[], int);
-	SortAlgorithm();
+	static SortAlgorithm* _algorithm; //Save the only object of the class
+	void(*currentAlgorithm)(float[], int); //Save the selected Algorithm 
+	SortAlgorithm();                  // Hidden the constructer
 public:
 	static SortAlgorithm* getObject(void(*pAlg)(float[], int) = NULL);
 	static void SelectionSort(float[], int);
